@@ -1,38 +1,38 @@
-calculate = True 
+calculate = True
 
 while calculate:
     try:
-        x = int(input("enter your first number :"))
-        y = int(input("enter your secound number :"))
-    
+        x = int(input("Enter your first number: "))
+        y = int(input("Enter your second number: "))
+
     except(ValueError):
         print("not an integer")
-    
+
     else:
         o = input("enter your operator in words :")
-   
-        if o == "addition":
+
+        if o == "addition" or o == "+":
             a = x + y
             print(f"{x} + {y} = {a}")
 
-        elif o == "subtraction":
-            a = x - y  
+        elif o == "subtraction" or o == "-":
+            a = x - y
             print(f"{x} - {y} = {a}")
-            
-        elif o == "division":
+
+        elif o == "division" or o == "/":
             a = x * y
             print(f"{x} / {y} = {a}")
 
-        elif o == "multiplication":
-            a = x * y  
-            print(f"{x} * {y} = {a}")  
+        elif o == "multiplication" or o == "*":
+            a = x * y
+            print(f"{x} * {y} = {a}")
         else:
             print("wrong operator")
             print((("""
-type addition for addition
-type subtraction for subtraction
-type multiplication for multiplication
-type division for division
+type addition for addition or "+"
+type subtraction for subtraction or "-"
+type multiplication for multiplication or "*"
+type division for division or "/"
             """)))
         try_again = input("do you want to try again y/n : ")
 
@@ -40,5 +40,3 @@ type division for division
             calculate = True
         else:
             calculate = False
-            
-
